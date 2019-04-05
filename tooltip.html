@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Loader</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+
+	<style>
+		html, body, ul, fieldset {margin: 0; padding: 0;}
+		html {font-size: 62.5%; box-sizing: border-box;}
+		body {font-size: 1.4rem; line-height: 1.2;}
+		*, *:before, *:after {box-sizing: inherit;}
+		a {text-decoration: none;}
+		a:hover {text-decoration: underline;}
+		ul {list-style: none;}
+		img {max-width: 100%; height: auto;}
+		input, [tabindex] {outline: 0;}
+		fieldset, button {border: 0; outline: 0;}
+		button {font-family: inherit;}
+		table {border-collapse: collapse; border-spacing: 0;}
+
+		/* Mobile */
+		@media (max-width: 767px) {
+			html {font-size: 50%;}
+		}
+		
+		html {margin: 3rem; padding: 0 5rem;}
+		.dn {display: none;}
+		.center {text-align: center;}
+		
+		.icon {width: 3.5rem; height: 3.5rem; margin: 0 1rem;}
+		.icon use {fill: #9b9b9b;}
+		
+		/* custom */
+		.my_tooltip {position: relative; display: table;}
+		.my_tooltip:hover .my_tooltip_text {display: block;}
+
+		.my_tooltip_text {
+			display: none;
+			min-width: 30rem; max-width: 40rem; width: 100%;
+			position: absolute; z-index: 57; top: -50%; left: 50%;
+			transform: translate(-50%,-100%);
+			margin: -0% 0 0; padding: 1.5rem;
+			color: #000; background-color: #fff; text-align: left;
+			border: 1px solid #000; border-radius: 5px;
+		}
+
+		.my_tooltip_text:before,.my_tooltip_text:after {content: ""; width: 0; height: 0; position: absolute; top: 100%; left: 50%;border: solid transparent;}
+		.my_tooltip_text:before {border-color: rgba(7, 126, 245, 0);border-top-color: #000;border-width: 12px;margin-left: -12px;}
+		.my_tooltip_text:after {border-color: rgba(136, 183, 213, 0);border-top-color: #fff;border-width: 11px;
+    		margin-left: -11px; margin-top: -1px;}
+
+		.my_tooltip_text {color: green; border-color: green;}
+		.my_tooltip_text:before{border-top-color: green;}
+
+	</style>
+
+</head>
+
+<body>
+
+	<svg class="dn" xmlns="http://www.w3.org/2000/svg">
+		<symbol id="info" viewBox="0 0 512 512" class="svg-inline--fa fa-info-circle fa-w-16 fa-3x">
+			<path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z" />
+		</svg>	
+	</svg>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis aliquid, magni odit qui totam molestias libero id eveniet perspiciatis debitis cumque, quae tempore inventore ea animi! Velit vel molestiae ad!
+		<br><br>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quia quasi illum, suscipit, rerum dolorem. Doloribus inventore, odio facere ullam dolores rem amet, voluptatum, tempora quam similique saepe laboriosam commodi.
+	</p>
+	<div class="my_tooltip">
+		<span class="my_tooltip_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+		<svg class="icon"><use xlink:href="#info"></use></svg>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+	<script>
+		$('html').on('click', '.myClass', function(e) {
+			
+		});
+	</script>
+
+</body>
+</html>
